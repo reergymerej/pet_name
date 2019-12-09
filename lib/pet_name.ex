@@ -9,7 +9,7 @@ defmodule PetName do
     "funny",
     "fuzzy",
     "little",
-    "sweet",
+    "sweet"
   ]
 
   @noun [
@@ -17,7 +17,7 @@ defmodule PetName do
     "darling",
     "baby",
     "ladybug",
-    "monkey",
+    "monkey"
   ]
 
   @doc """
