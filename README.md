@@ -1,6 +1,6 @@
 # PetName
 
-**TODO: Add description**
+This is a module to assist you in generating cute names for your pet.
 
 ## Installation
 
