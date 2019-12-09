@@ -2,11 +2,13 @@ defmodule PetNameTest do
   use ExUnit.Case
   doctest PetName
 
-  test "greets the world" do
-    assert PetName.hello() == :world
+  test "returns a string" do
+    :rand.seed(:exsplus, {1, 2, 333})
+    assert PetName.get() === "funny darling"
   end
 
-  test "returns a string" do
-    assert PetName.get() === "a nice name"
+  test "returns something from the list" do
+    list = ["a", "b", 3, nil]
+    assert PetName.rando(list) in list
   end
 end

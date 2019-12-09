@@ -1,31 +1,36 @@
 defmodule PetName do
   @moduledoc """
-  Documentation for PetName.
+    This module will return a nickname for your pet or unfortunate loved one.
   """
 
-  @doc """
-  Hello world.
+  @adjective [
+    "cute",
+    "darling",
+    "funny",
+    "fuzzy",
+    "little",
+    "sweet",
+  ]
 
-  ## Examples
-
-      iex> PetName.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  @noun [
+    "angel",
+    "darling",
+    "baby",
+    "ladybug",
+    "monkey",
+  ]
 
   @doc """
   Get a nice pet name.
 
   ## Examples
 
+      iex> :rand.seed(:exsplus, {9, 8, 7}) # seed prng
       iex> PetName.get()
-      "a nice name"
+      "fuzzy monkey"
   """
   def get() do
-    "a nice name"
+    "#{rando(@adjective)} #{rando(@noun)}"
   end
 
   @doc """
@@ -36,11 +41,12 @@ defmodule PetName do
       iex> PetName.rando()
       nil
 
-      iex> PetName.rando(["a", "b", "c"])
-      "a"
+      iex> :rand.seed(:exsplus, {1, 1, 1}) # seed prng
+      iex> PetName.rando(1..100)
+      11
   """
-  def rando(_list) do
-    "a"
+  def rando(list) do
+    Enum.random(list)
   end
 
   def rando() do
