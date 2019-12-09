@@ -2,6 +2,8 @@
 
 This is a module to assist you in generating cute names for your pet.
 
+[![Build Status](https://travis-ci.org/reergymerej/pet_name.svg?branch=master)](https://travis-ci.org/reergymerej/pet_name)
+
 ## Installation
 
 If [available in Hex](https://hex.pm/docs/publish), the package can be installed
