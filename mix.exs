@@ -7,7 +7,11 @@ defmodule PetName.MixProject do
       version: "0.1.0",
       elixir: "~> 1.9",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      description: "This module will return a nickname for your pet or unfortunate loved one.",
+      deps: deps(),
+      name: "PetName",
+      source_url: "https://github.com/reergymerej/pet_name",
+      package: package(),
     ]
   end
 
@@ -25,6 +29,13 @@ defmodule PetName.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
       {:mix_test_watch, "~> 1.0", only: :dev, runtime: false},
       {:ex_doc, "~> 0.21"}
+    ]
+  end
+
+  defp package() do
+    [
+      licenses: ["0BSD"],
+      links: %{"GitHub" => "https://github.com/reergymerej/pet_name"}
     ]
   end
 end
